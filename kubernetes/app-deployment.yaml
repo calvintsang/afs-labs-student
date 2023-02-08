@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app-deployment
-  namespace: Ctsang
+  namespace: ctsang
   labels:
     app: app
 spec:
@@ -22,7 +22,7 @@ spec:
       - envFrom:
         - secretRef:
             name: db-secret
-        name: <NAME>
+        name: app-deployment
         image: harbor.dev.afsmtddso.com/ctsang-harbor-project/lab-env-repo:1.0
         ports:
         - containerPort: 5000
