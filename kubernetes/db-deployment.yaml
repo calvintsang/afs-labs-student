@@ -23,6 +23,6 @@ spec:
         - secretRef:
             name: db-secret
         name: db-deployment
-        image: harbor.dev.afsmtddso.com/ctsang-harbor-project/lab-env-repo:1.0
+        image: harbor.dev.afsmtddso.com/ctsang-harbor-project/db:f4758a9-ae8f8f6
         ports: 
         - containerPort: 5432

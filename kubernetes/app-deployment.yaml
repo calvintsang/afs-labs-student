@@ -20,9 +20,11 @@ spec:
     spec:
       containers:
       - envFrom:
+        - configMapRef:
+            name: feature-toggle
         - secretRef:
             name: db-secret
         name: app-deployment
-        image: harbor.dev.afsmtddso.com/ctsang-harbor-project/lab-env-repo:1.0
+        image: harbor.dev.afsmtddso.com/ctsang-harbor-project/app:f4758a9-ae8f8f6
         ports:
         - containerPort: 5000
